@@ -4,7 +4,7 @@
 Plugin Name: Core Portfolio
 Plugin URI: http://mstrends.com/plugins/portfolio-post-type
 Description: Creates a Specific CPT + Taxonomy + Widget for Portfolio.
-Version: 1.0
+Version: 1.1
 Author: Muhamamd Faisal
 Author URI: http://themeforest.net/user/MsTrends
 */
@@ -86,3 +86,33 @@ Author URI: http://themeforest.net/user/MsTrends
     }
 
     add_action( 'admin_enqueue_scripts', 'ms_enqueue_portfolio_scripts' );    
+
+
+#-----------------------------------------------------------------#
+#  Resolves CPT vs Page Slug Issue
+#-----------------------------------------------------------------# 
+
+    if ( !function_exists('portfolio_is_bad_hierarchical_slug') ) {
+
+        function portfolio_is_bad_hierarchical_slug( $is_bad_hierarchical_slug, $slug, $post_type, $post_parent ) {
+            if ( !$post_parent && $slug == 'portfolio' )
+                return true;
+            return $is_bad_hierarchical_slug;
+        }
+
+    }
+
+    add_filter( 'wp_unique_post_slug_is_bad_hierarchical_slug', 'portfolio_is_bad_hierarchical_slug', 10, 4 );
+
+
+    if ( !function_exists('portfolio_is_bad_flat_slug') ) {
+
+        function portfolio_is_bad_flat_slug( $is_bad_flat_slug, $slug, $post_type ) {
+            if ( $slug == 'portfolio' )
+                return true;
+            return $is_bad_flat_slug;
+        }
+
+    }
+
+    add_filter( 'wp_unique_post_slug_is_bad_flat_slug', 'portfolio_is_bad_flat_slug', 10, 3 );

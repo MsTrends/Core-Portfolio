@@ -22,17 +22,17 @@ class MS_Portfolio_CPT {
 	public function portfolio_cpt_register() {  
 	    	 
 		$portfolio_labels = array(
-			'name' 					 => esc_html__( 'Portfolio', 'framework' ),
-			'singular_name' 		 => esc_html__( 'Portfolio Post', 'framework' ),
-			'add_new' 				 => esc_html__( 'Add New', 'framework' ),
-			'add_new_item'			 => esc_html__( 'Add New Portfolio', 'framework' ),
-			'edit_item' 			 => esc_html__( 'Edit Portfolio', 'framework' ),
-			'new_item' 				 => esc_html__( 'Add New', 'framework' ),
-			'view_item' 			 => esc_html__( 'View Portfolio', 'framework' ),
-			'all_items'       	  	 => esc_html__( 'All Portfolio Items', 'framework' ),
-			'search_items' 			 => esc_html__( 'Search Portfolio', 'framework' ),
-			'not_found' 			 => esc_html__( 'No portfolio items found', 'framework' ),
-			'not_found_in_trash'	 => esc_html__( 'No portfolio items found in trash', 'framework' )
+			'name' 					 => esc_html__( 'Portfolio', 'mstrends' ),
+			'singular_name' 		 => esc_html__( 'Portfolio Post', 'mstrends' ),
+			'add_new' 				 => esc_html__( 'Add New', 'mstrends' ),
+			'add_new_item'			 => esc_html__( 'Add New Portfolio', 'mstrends' ),
+			'edit_item' 			 => esc_html__( 'Edit Portfolio', 'mstrends' ),
+			'new_item' 				 => esc_html__( 'Add New', 'mstrends' ),
+			'view_item' 			 => esc_html__( 'View Portfolio', 'mstrends' ),
+			'all_items'       	  	 => esc_html__( 'All Portfolio Items', 'mstrends' ),
+			'search_items' 			 => esc_html__( 'Search Portfolio', 'mstrends' ),
+			'not_found' 			 => esc_html__( 'No portfolio items found', 'mstrends' ),
+			'not_found_in_trash'	 => esc_html__( 'No portfolio items found in trash', 'mstrends' )
 		);
 
 		$args = array(

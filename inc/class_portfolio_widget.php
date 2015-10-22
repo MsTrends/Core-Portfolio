@@ -62,7 +62,7 @@ class MS_Portfolio_Cats_Widget extends WP_Widget {
 
 		<ul>
 
-			<li><a href="<?php echo esc_url( $portfolio_url ); ?>" data-filter="*">All</a></li>
+			<li><a href="<?php echo esc_url( $portfolio_url ); ?>" data-filter="*"><?php _e('All', 'mstrends'); ?></a></li>
 
 			<?php foreach( $terms as $term ) { ?>
 
