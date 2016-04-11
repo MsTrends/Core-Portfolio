@@ -1,6 +1,6 @@
 <?php
 
-class MS_Portfolio_Taxonomies {
+class TH_Portfolio_Taxonomies {
 
 
 	#-----------------------------------------------------------------#
@@ -22,21 +22,21 @@ class MS_Portfolio_Taxonomies {
 	public function portfolio_category_register() {  
 
 		$taxonomy_labels = array(
-			'name' 							=> esc_html__( 'Portfolio Categories', 'mstrends' ),
-			'singular_name' 				=> esc_html__( 'Portfolio Category', 'mstrends' ),
-			'search_items' 					=> esc_html__( 'Search Portfolio Categories', 'mstrends' ),
-			'popular_items'					=> esc_html__( 'Popular Portfolio Categories', 'mstrends' ),
-			'all_items' 					=> esc_html__( 'All Portfolio Categories', 'mstrends' ),
-			'parent_item' 					=> esc_html__( 'Parent Portfolio Category', 'mstrends' ),
-			'parent_item_colon' 			=> esc_html__( 'Parent Portfolio Category:', 'mstrends' ),
-			'edit_item' 					=> esc_html__( 'Edit Portfolio Category', 'mstrends' ),
-			'update_item' 					=> esc_html__( 'Update Portfolio Category', 'mstrends' ),
-			'add_new_item' 					=> esc_html__( 'Add New Portfolio Category', 'mstrends' ),
-			'new_item_name' 				=> esc_html__( 'New Portfolio Category Name', 'mstrends' ),
-			'separate_items_with_commas' 	=> esc_html__( 'Separate portfolio categories with commas', 'mstrends' ),
-			'add_or_remove_items' 			=> esc_html__( 'Add or remove portfolio categories', 'mstrends' ),
-			'choose_from_most_used' 		=> esc_html__( 'Choose from the most used portfolio categories', 'mstrends' ),
-			'menu_name' 					=> esc_html__( 'Categories', 'mstrends' ),
+			'name' 							=> esc_html__( 'Portfolio Categories', 'themeshash' ),
+			'singular_name' 				=> esc_html__( 'Portfolio Category', 'themeshash' ),
+			'search_items' 					=> esc_html__( 'Search Portfolio Categories', 'themeshash' ),
+			'popular_items'					=> esc_html__( 'Popular Portfolio Categories', 'themeshash' ),
+			'all_items' 					=> esc_html__( 'All Portfolio Categories', 'themeshash' ),
+			'parent_item' 					=> esc_html__( 'Parent Portfolio Category', 'themeshash' ),
+			'parent_item_colon' 			=> esc_html__( 'Parent Portfolio Category:', 'themeshash' ),
+			'edit_item' 					=> esc_html__( 'Edit Portfolio Category', 'themeshash' ),
+			'update_item' 					=> esc_html__( 'Update Portfolio Category', 'themeshash' ),
+			'add_new_item' 					=> esc_html__( 'Add New Portfolio Category', 'themeshash' ),
+			'new_item_name' 				=> esc_html__( 'New Portfolio Category Name', 'themeshash' ),
+			'separate_items_with_commas' 	=> esc_html__( 'Separate portfolio categories with commas', 'themeshash' ),
+			'add_or_remove_items' 			=> esc_html__( 'Add or remove portfolio categories', 'themeshash' ),
+			'choose_from_most_used' 		=> esc_html__( 'Choose from the most used portfolio categories', 'themeshash' ),
+			'menu_name' 					=> esc_html__( 'Categories', 'themeshash' ),
 		);
 
 		$args = array( 
