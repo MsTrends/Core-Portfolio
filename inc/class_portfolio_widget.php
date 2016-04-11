@@ -4,10 +4,10 @@
 /*	Registering Custom Widget
 /*-----------------------------------------------------------------------------------*/
 
-function ms_portfolio_cats_widgets() {
-	register_widget( 'MS_Portfolio_Cats_Widget' );
+function portfolio_widget_register() {
+	register_widget( 'TH_Portfolio_Cats_Widget' );
 }
-add_action( 'widgets_init', 'ms_portfolio_cats_widgets' );
+add_action( 'widgets_init', 'portfolio_widget_register' );
 
 
 
@@ -15,7 +15,7 @@ add_action( 'widgets_init', 'ms_portfolio_cats_widgets' );
 /*	Extending WordPress Widget Class
 /*-----------------------------------------------------------------------------------*/
 
-class MS_Portfolio_Cats_Widget extends WP_Widget {
+class TH_Portfolio_Cats_Widget extends WP_Widget {
 
 		
 
@@ -26,10 +26,10 @@ class MS_Portfolio_Cats_Widget extends WP_Widget {
 	function __construct() {
 
 		$args = array(
-			'description' => esc_html__('A widget that displays your Portfolio categories.', 'mstrends')
+			'description' => esc_html__('A widget that displays your Portfolio categories.', 'themeshash')
 		);
 		
-	    parent::__construct( 'ms_portfolio_cats_widget', esc_html__('Portfolio Categories', 'mstrends' ), $args );
+	    parent::__construct( 'portfolio_categories', esc_html__('Portfolio Categories', 'themeshash' ), $args );
 
 	}
 
@@ -56,13 +56,13 @@ class MS_Portfolio_Cats_Widget extends WP_Widget {
 
 		// widget specific variables
 		$terms = get_terms('portfolio_category');
-		$portfolio_url = get_theme_mod('ms_portfolio_page_id') ? get_permalink( get_theme_mod('ms_portfolio_page_id') ) : '#no-portfolio-defined';
+		$portfolio_url = get_post_type_archive_link( get_post_type() );
 
 		?>
 
 		<ul>
 
-			<li><a href="<?php echo esc_url( $portfolio_url ); ?>" data-filter="*"><?php _e('All', 'mstrends'); ?></a></li>
+			<li><a href="<?php echo esc_url( $portfolio_url ); ?>" data-filter="*"><?php _e('All', 'themeshash'); ?></a></li>
 
 			<?php foreach( $terms as $term ) { ?>
 
@@ -99,7 +99,7 @@ class MS_Portfolio_Cats_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e('Title:', 'mstrends') ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e('Title:', 'themeshash') ?></label>
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" type="text" />
 		</p>
 		
