@@ -51,7 +51,6 @@ Author URI: http://themeforest.net/user/ThemesHash
     function th_portfolio_activate() { 
 
         th_setup_portfolio();
-        th_portfolio_install();
         flush_rewrite_rules();
 
     }
